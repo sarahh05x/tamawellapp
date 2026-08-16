@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  --color-cream: #FDFBF7;
+  --color-cream-dark: #F5F0E8;
+  --color-sage: #8BAF7C;
+  --color-sage-light: #B8D4A8;
+  --color-sage-pale: #E8F2E4;
+  --color-sunset: #E8845A;
+  --color-sunset-light: #F5A87A;
+  --color-sunset-pale: #FDE8DC;
+  --color-honey: #F2C94C;
+  --color-honey-light: #F9E08A;
+  --color-honey-pale: #FEF5D4;
+  --color-blush: #F4A0B0;
+  --color-blush-light: #F9C5D0;
+  --color-blush-pale: #FDEEF1;
+  --color-brown: #7A5C45;
+  --color-brown-light: #A07860;
+  --color-brown-pale: #EDE0D8;
+  --color-ink: #3A2E28;
+  --color-muted: #9A8A7A;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Pet animations */
+@keyframes breathing {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+}
+
+.pet-breathing {
+  animation: breathing 3s ease-in-out infinite;
+}
+
+.pet-bounce {
+  animation: bounce 0.6s ease-out;
+}
